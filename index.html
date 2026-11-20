@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>蒸烤箱选购策略整理 | 来自B站《双11蒸烤箱选购》</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body {
+    font-family:-apple-system,"PingFang SC","Microsoft YaHei","Noto Sans SC",sans-serif;
+    background:#F3F6FB; color:#1F2937; line-height:1.75; font-size:15px;
+  }
+  .wrap { max-width:1080px; margin:0 auto; padding:0 20px 60px; }
+
+  /* ===== 头部 ===== */
+  header {
+    background:linear-gradient(135deg,#7C2D12 0%,#B45309 55%,#D97706 100%);
+    color:#fff; padding:38px 20px 30px; border-radius:0 0 22px 22px;
+    box-shadow:0 4px 18px rgba(124,45,18,.25);
+  }
+  .header-inner { max-width:1080px; margin:0 auto; }
+  .badge-row { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:14px; }
+  .badge {
+    background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.35);
+    border-radius:999px; padding:2px 12px; font-size:12.5px; letter-spacing:.5px;
+  }
+  h1 { font-size:27px; font-weight:700; letter-spacing:1px; margin-bottom:8px; }
+  .subtitle { font-size:13.5px; opacity:.92; }
+  .subtitle b { font-weight:600; }
+  .src-note { margin-top:12px; font-size:12.5px; background:rgba(255,255,255,.12); border-left:3px solid rgba(255,255,255,.6); padding:6px 12px; border-radius:0 8px 8px 0; }
+
+  /* ===== 导航 ===== */
+  nav {
+    position:sticky; top:0; z-index:50; background:#fff;
+    box-shadow:0 2px 8px rgba(15,23,42,.08); margin:18px -20px 26px; padding:8px 20px;
+    border-radius:12px; display:flex; gap:4px; flex-wrap:wrap; justify-content:center;
+  }
+  nav a {
+    text-decoration:none; color:#B45309; font-size:13.5px; padding:4px 12px;
+    border-radius:8px; transition:.15s; white-space:nowrap;
+  }
+  nav a:hover { background:#FFF7ED; }
+
+  /* ===== 通用区块 ===== */
+  section { margin-bottom:34px; }
+  .sec-head { display:flex; align-items:baseline; gap:10px; margin-bottom:14px; flex-wrap:wrap; }
+  .sec-num {
+    background:linear-gradient(135deg,#B45309,#D97706); color:#fff; font-weight:700;
+    width:30px; height:30px; border-radius:9px; display:flex; align-items:center; justify-content:center;
+    font-size:15px; flex:none; transform:translateY(4px);
+  }
+  h2 { font-size:20px; color:#7C2D12; font-weight:700; }
+  .sec-desc { font-size:13px; color:#6B7280; width:100%; margin-left:42px; margin-top:-8px; }
+
+  .card {
+    background:#fff; border-radius:14px; padding:20px 22px;
+    box-shadow:0 1px 4px rgba(15,23,42,.07),0 6px 16px rgba(15,23,42,.04);
+    border:1px solid #F0E8DC;
+  }
+
+  /* ===== TLDR ===== */
+  .tldr-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); gap:14px; }
+  .tldr {
+    background:#fff; border-radius:14px; padding:16px 18px; border-top:4px solid #D97706;
+    box-shadow:0 1px 4px rgba(15,23,42,.07);
+  }
+  .tldr.blue { border-top-color:#1E5AA8; }
+  .tldr.green { border-top-color:#16A34A; }
+  .tldr.red { border-top-color:#DC2626; }
+  .tldr h3 { font-size:15px; color:#7C2D12; margin-bottom:6px; display:flex; gap:8px; align-items:center;}
+  .tldr p { font-size:13.5px; color:#374151; }
+  .tldr p b { color:#B91C1C; }
+
+  /* ===== 步骤流程 ===== */
+  .flow { display:flex; flex-wrap:wrap; gap:10px; align-items:stretch; }
+  .flow-step {
+    flex:1 1 160px; background:#fff; border:1.5px solid #FDE68A; border-radius:12px; padding:12px 14px; position:relative;
+  }
+  .flow-step .fs-tag {
+    position:absolute; top:-11px; left:12px; background:#B45309; color:#fff; font-size:11.5px;
+    border-radius:999px; padding:1px 10px;
+  }
+  .flow-step .fs-title { font-weight:700; font-size:14px; color:#7C2D12; margin-top:6px; }
+  .flow-step .fs-body { font-size:12.8px; color:#4B5563; margin-top:4px; }
+  .flow-step.not { background:#FEF2F2; border-color:#FECACA; }
+  .flow-step.not .fs-tag { background:#DC2626; }
+  .flow-step.good { background:#F0FDF4; border-color:#BBF7D0; }
+  .flow-step.good .fs-tag { background:#16A34A; }
+
+  /* ===== 小节卡片 ===== */
+  .grid-2 { display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:14px; }
+  .info-card h3 { font-size:15.5px; color:#7C2D12; margin-bottom:8px; padding-bottom:6px; border-bottom:2px solid #FFF7ED; }
+  .info-card h3 .dot { display:inline-block; width:9px; height:9px; border-radius:50%; background:#D97706; margin-right:8px; }
+  .info-card ul, .info-card ol { padding-left:20px; }
+  .info-card li { font-size:13.8px; color:#374151; margin-bottom:7px; }
+  .info-card li b { color:#7C2D12; }
+  .tip {
+    background:#FFF7ED; border-left:3px solid #D97706; border-radius:0 8px 8px 0;
+    padding:8px 12px; font-size:13px; color:#92400E; margin-top:10px;
+  }
+  .warn {
+    background:#FEF2F2; border-left:3px solid #DC2626; border-radius:0 8px 8px 0;
+    padding:8px 12px; font-size:13px; color:#991B1B; margin-top:10px;
+  }
+
+  /* ===== 对比面板 ===== */
+  .vs-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  @media (max-width:700px){ .vs-grid { grid-template-columns:1fr; } }
+  .vs-col { border-radius:12px; padding:14px 16px; }
+  .vs-col.win { background:#F0FDF4; border:1.5px solid #86EFAC; }
+  .vs-col.lose { background:#FEF2F2; border:1.5px solid #FECACA; }
+  .vs-col h4 { font-size:14.5px; margin-bottom:8px; display:flex; align-items:center; gap:8px; }
+  .vs-col.win h4 { color:#15803D; }
+  .vs-col.lose h4 { color:#B91C1C; }
+  .vs-col ul { padding-left:18px; }
+  .vs-col li { font-size:13.2px; margin-bottom:6px; }
+  .vs-tag {
+    font-size:11px; border-radius:6px; padding:1px 8px; color:#fff; font-weight:600; flex:none;
+  }
+  .win .vs-tag { background:#16A34A; }
+  .lose .vs-tag { background:#DC2626; }
+
+  /* ===== 表 ===== */
+  table { width:100%; border-collapse:collapse; font-size:13.5px; }
+  .tbl-card { background:#fff; border-radius:14px; overflow:hidden; box-shadow:0 1px 4px rgba(15,23,42,.07); border:1px solid #F0E8DC; }
+  th { background:#B45309; color:#fff; padding:10px 12px; text-align:left; font-weight:600; white-space:nowrap; }
+  td { padding:9px 12px; border-top:1px solid #F5EFE6; vertical-align:top; color:#374151; }
+  tr:nth-child(even) td { background:#FBF7F0; }
+  .tech { color:#7C2D12; font-weight:600; }
+
+  /* ===== 价位区块 ===== */
+  .price-block { margin-bottom:20px; }
+  .price-head {
+    display:flex; align-items:center; gap:10px; padding:9px 16px; border-radius:10px 10px 0 0;
+    color:#fff; font-weight:700; font-size:15px;
+  }
+  .price-head .ph-sub { font-weight:400; font-size:12.5px; opacity:.95; margin-left:auto; text-align:right;}
+  .p1 .price-head { background:linear-gradient(90deg,#92400E,#D97706); }
+  .p2 .price-head { background:linear-gradient(90deg,#1E5AA8,#3B82F6); }
+  .p3 .price-head { background:linear-gradient(90deg,#4C1D95,#7C3AED); }
+  .p4 .price-head { background:linear-gradient(90deg,#134E4A,#0D9488); }
+  .price-body { background:#fff; border:1px solid #F0E8DC; border-top:none; border-radius:0 0 12px 12px; padding:6px 16px 14px; }
+  .price-body td, .price-body th { padding:8px 10px; }
+
+  .pill { display:inline-block; border-radius:999px; padding:1px 10px; font-size:12px; font-weight:600; white-space:nowrap; }
+  .pill.rec { background:#DCFCE7; color:#15803D; }
+  .pill.mid { background:#FEF3C7; color:#B45309; }
+  .pill.top { background:#E0E7FF; color:#3730A3; }
+  .pill.bad { background:#FEE2E2; color:#B91C1C; }
+  .model { font-weight:700; color:#7C2D12; font-size:13.8px; }
+  .model small { display:block; font-weight:400; color:#64748B; font-size:12px; }
+  .pros { color:#166534; }
+  .cons { color:#B91C1C; }
+
+  .blacklist { background:#fff; border:1px solid #FECACA; border-radius:14px; padding:16px 20px; margin-top:18px; }
+  .blacklist h3 { color:#B91C1C; font-size:15.5px; margin-bottom:10px; }
+  .bl-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:10px; }
+  .bl-item { background:#FEF2F2; border-radius:10px; padding:10px 14px; font-size:13.3px; }
+  .bl-item b { color:#991B1B; }
+
+  /* ===== 场景卡 ===== */
+  .scene-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:12px; }
+  .scene { background:#fff; border-radius:12px; padding:14px 16px; border:1px solid #F0E8DC; border-left:4px solid #D97706; }
+  .scene h4 { font-size:14.3px; color:#7C2D12; margin-bottom:5px; }
+  .scene p { font-size:13.2px; color:#374151; }
+  .scene .pick { display:inline-block; margin-top:6px; background:#FFF7ED; color:#B45309; font-weight:600; font-size:13px; border-radius:8px; padding:2px 10px; }
+  .scene.gold { border-left-color:#1283C3; }
+  .scene.green { border-left-color:#16A34A; }
+
+  /* ===== 检查清单 ===== */
+  .check-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(330px,1fr)); gap:10px; }
+  .check-item {
+    display:flex; gap:10px; align-items:flex-start; background:#fff; border:1px solid #F0E8DC;
+    border-radius:10px; padding:10px 14px; cursor:pointer; transition:.15s; user-select:none;
+  }
+  .check-item:hover { border-color:#FCD34D; background:#FFFDF7; }
+  .check-item input { margin-top:4px; width:16px; height:16px; accent-color:#B45309; flex:none; cursor:pointer; }
+  .check-item .ck-title { font-weight:600; font-size:13.8px; color:#7C2D12; }
+  .check-item .ck-note { font-size:12.6px; color:#64748B; }
+  .check-item.done { background:#F0FDF4; border-color:#BBF7D0; }
+  .check-item.done .ck-title { color:#15803D; text-decoration:line-through; }
+  .check-progress { font-size:13px; color:#B45309; font-weight:600; margin-bottom:12px; }
+  .check-progress .bar { display:inline-block; width:160px; height:8px; background:#F1E7D8; border-radius:99px; margin:0 8px; vertical-align:middle; overflow:hidden; }
+  .check-progress .bar i { display:block; height:100%; background:linear-gradient(90deg,#B45309,#F59E0B); transition:.3s; }
+
+  /* ===== 装修建议 ===== */
+  .reno { background:linear-gradient(135deg,#EFF6FF,#F0F9FF); border:1px solid #BFDBFE; }
+  .reno .tag-my {
+    display:inline-block; background:#1E5AA8; color:#fff; font-size:11.5px; border-radius:6px; padding:1px 8px; margin-left:8px; vertical-align:2px;
+  }
+  .reno h3 { font-size:15.5px; color:#1E40AF; margin-bottom:10px; }
+  .reno ol { padding-left:20px; }
+  .reno li { font-size:13.6px; color:#374151; margin-bottom:8px; }
+
+  /* ===== 页脚 ===== */
+  footer {
+    background:#7C2D12; color:#FDE8D0; border-radius:16px; padding:22px 26px; font-size:12.8px; margin-top:10px;
+  }
+  footer b { color:#fff; }
+  footer .fyi { margin-top:10px; padding-top:10px; border-top:1px dashed rgba(255,255,255,.25); color:#F5C89A; }
+  .aigc { margin-top:12px; font-size:11.5px; color:#F1B57F; text-align:right; }
+
+  /* ===== 悬浮按钮 ===== */
+  .float-btns { position:fixed; right:18px; bottom:22px; display:flex; flex-direction:column; gap:10px; z-index:99; }
+  .fbtn {
+    width:42px; height:42px; border-radius:50%; border:none; cursor:pointer; font-size:17px;
+    background:#B45309; color:#fff; box-shadow:0 3px 10px rgba(180,83,9,.4); transition:.15s;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .fbtn:hover { transform:scale(1.08); }
+  .fbtn.print { background:#1E5AA8; }
+
+  @media print {
+    body { background:#fff; font-size:12px; }
+    nav, .float-btns, .check-item input { display:none !important; }
+    header { border-radius:0; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    .card, .tldr, .tbl-card, .price-body, .scene, .check-item, .flow-step { box-shadow:none; }
+    section { page-break-inside:avoid; margin-bottom:16px; }
+    .price-block { page-break-inside:avoid; }
+    .vs-col, .info-card { page-break-inside:avoid; }
+  }
+  @media (max-width:640px){
+    h1{font-size:21px;} .wrap{padding:0 12px 40px;} nav{margin:12px -12px 20px;}
+    th,td{padding:7px 8px;font-size:12.5px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="badge-row">
+      <span class="badge">🔥 蒸烤箱专题</span>
+      <span class="badge">双11 口径</span>
+      <span class="badge">台式 · 嵌入式 · 微蒸烤</span>
+      <span class="badge">2026-11</span>
+      <span class="badge">在线版</span>
+    </div>
+    <h1>蒸烤箱 / 微蒸烤选购策略整理</h1>
+    <div class="subtitle">整理自 B站UP主 <b>「Wilson学长」</b>《一机多用，样样将就？双11蒸烤箱选购，台式·嵌入·微蒸烤横评》（视频 20分43秒）同名专栏文章</div>
+    <div class="src-note">
+      选购逻辑：从"烤、蒸、微"三大功能的底层原理出发拆解配置好坏，再对市面热销50多款机型分类横评（嵌入式微蒸烤 / 嵌入式蒸烤箱 / 台式）。机型结论忠实于UP主观点，文末附"个人结合装修的补充"。
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+<nav>
+  <a href="#tldr">30秒速览</a>
+  <a href="#path">决策路径</a>
+  <a href="#detail">原理拆解</a>
+  <a href="#steam">蒸汽正误</a>
+  <a href="#models">机型清单</a>
+  <a href="#black">避坑名单</a>
+  <a href="#scene">场景抄作业</a>
+  <a href="#checklist">核对清单</a>
+  <a href="#install">安装落地</a>
+</nav>
+
+<!-- ============ 30秒速览 ============ -->
+<section id="tldr">
+  <div class="sec-head"><span class="sec-num">0</span><h2>30秒速览（先看这6条）</h2></div>
+  <div class="tldr-grid">
+    <div class="tldr blue">
+      <h3>① 微蒸烤 ≠ 减配蒸烤箱</h3>
+      <p>UP主结论：微蒸烤的"蒸"和"烤"与同级蒸烤箱<b>功能基本一样、不存在减配</b>，只是多了微波。唯一要权衡的是<b>价格（贵几百到一千）和空间（省一个微波炉位）</b>。</p>
+    </div>
+    <div class="tldr">
+      <h3>② 烤的硬指标：上下烤管 + 背部热风</h3>
+      <p>少了任何一个都会翻车（单面焦、表皮不脆）。26年的今天<b>嵌入式基本不缺</b>这两样，但<b>台式减配仍是重灾区</b>——台式选购第一轮先筛这个。</p>
+    </div>
+    <div class="tldr">
+      <h3>③ 控温选"独立控温"</h3>
+      <p>上下烤管能设不同温度，披萨/蛋挞/泡芙/戚风才烤得好；统一控温也能用但适配食材少。<b>6000+元还统一控温的（西门子Z7）直接不考虑</b>。</p>
+    </div>
+    <div class="tldr green">
+      <h3>④ 蒸汽选"直喷式"，蒸发器认"流道式"</h3>
+      <p>蒸腾式有<b>二次蒸发卫生隐患 + 底部水渍难打理</b>（方太还有蒸腾式产品在售）。直喷式里，流道式蒸发器<b>瞬间气化、出汽量大一倍、几乎不结垢</b>，优于铝制蒸发器。</p>
+    </div>
+    <div class="tldr">
+      <h3>⑤ 微波功率 800W 够用</h3>
+      <p>日常热菜800W足够，追求快可上1000W+（凯度1100W、美的R6S二代1150W）。功率之外更要记住：<b>微波必须用专用网架，别用蒸盘/烤盘</b>。</p>
+    </div>
+    <div class="tldr red">
+      <h3>⑥ 安装三坑：16A / 散热空间 / 高度</h3>
+      <p>① 必须<b>16A插座</b>，且尽量留在<b>相邻柜内</b>（插头不占机身进深）；② 背部<b>不做背板、离墙≥50mm</b>散热；③ 高度按身高定，少弯腰。这个错了返工最贵。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 决策路径 ============ -->
+<section id="path">
+  <div class="sec-head"><span class="sec-num">1</span><h2>选购决策路径（五步走）</h2></div>
+  <div class="card">
+    <div class="flow">
+      <div class="flow-step">
+        <span class="fs-tag">第1步 · 定形态</span>
+        <div class="fs-title">嵌入 / 台式 / 要不要微波</div>
+        <div class="fs-body">嵌入是主流（55L+大容量、配置全）；台式灵活但20-30L且减配多；微波看有无热菜习惯。</div>
+      </div>
+      <div class="flow-step good">
+        <span class="fs-tag">第2步 · 卡硬配置</span>
+        <div class="fs-title">上下烤管 + 背部热风</div>
+        <div class="fs-body">台式第一轮就筛这个；嵌入式也顺手确认一下，不放心看详情页烤管数量和"大热风"字样。</div>
+      </div>
+      <div class="flow-step good">
+        <span class="fs-tag">第3步 · 验蒸汽</span>
+        <div class="fs-title">直喷式 + 流道式蒸发器</div>
+        <div class="fs-body">蒸腾式直接过。直喷式里优先流道式（出汽快、量大、不结垢）；进阶看"加湿烤""蒸烤同烹"。</div>
+      </div>
+      <div class="flow-step">
+        <span class="fs-tag">第4步 · 看控温与风</span>
+        <div class="fs-title">独立控温 + 风扇转速</div>
+        <div class="fs-body">独立控温优先（烘焙党必选）；背部风扇转速2000-2500+ r/min，越高空气炸/脆皮越好。</div>
+      </div>
+      <div class="flow-step">
+        <span class="fs-tag">第5步 · 按场景微调</span>
+        <div class="fs-title">容量 / 智能 / 颜色</div>
+        <div class="fs-body">大家庭上78L-80L三层同烤；新手看AI摄像头/大模型菜谱；白色厨柜留意白色机型（可选面窄）。</div>
+      </div>
+    </div>
+    <div class="tip">💡 功率不用太纠结：现在机型都是16A插头，220V×16A=3520W总功率天花板一样，各家烧烤功率差距不大。有差距的在<b>烤管材质</b>（石墨烯）和<b>纯蒸功率</b>（对比时认准纯蒸模式功率，别被烤管同时工作的峰值功率骗了）。</div>
+  </div>
+</section>
+
+<!-- ============ 原理拆解 ============ -->
+<section id="detail">
+  <div class="sec-head"><span class="sec-num">2</span><h2>从原理看配置：烤 / 蒸 / 微</h2>
+    <div class="sec-desc">UP主讲原理的几个硬核知识点，看懂了配置表就不用背参数</div>
+  </div>
+  <div class="grid-2">
+
+    <div class="card info-card">
+      <h3><span class="dot"></span>🔥 烤 —— 为什么必须"上下管+背热风"</h3>
+      <ul>
+        <li><b>只有下管：</b>靠热辐射单面加热，贴烤管的一面焦了、背面还生（北京烤鸭靠转动解决，蛋挞吐司转不了）。</li>
+        <li><b>加上上管：</b>上下两面均匀，"熟"没问题了。</li>
+        <li><b>为什么还要背部热风：</b>食物表面有一层<b>饱和湿空气边界层</b>，水膜压着温度上不去——<b>美拉德反应要140℃+，焦糖化要160-180℃</b>。背环管+风扇的高速气流带走水汽，表皮脱水脆化上色才发生。</li>
+        <li><b>石墨烯烤管：</b>高导热拉升温度，内部快速加热，烤红薯糖化更充分更香甜（美的5k+机型的"瞬热涡轮大热风"标配）。</li>
+        <li><b>独立控温：</b>披萨蛋挞泡芙上下温度要求不同；能设不同，也能设相同，向下兼容统一控温。</li>
+      </ul>
+      <div class="warn">⚠️ 台式蒸烤箱里仍有不少机型减配下烤管或背部热风，选购时对照参数表逐一确认。</div>
+    </div>
+
+    <div class="card info-card">
+      <h3><span class="dot"></span>💨 蒸 —— 直喷式怎么挑，蒸汽怎么排</h3>
+      <ul>
+        <li><b>加湿烤（蒸烤协同）：</b>口感选"鲜嫩"模式边烤边加湿，食物不干柴——很多人只用蒸功能蒸馒头包子，浪费了。</li>
+        <li><b>蒸烤同烹：</b>上烤培根/秋刀鱼，下蒸生菜/扇贝，一锅出两道菜。</li>
+        <li><b>双重冷凝排气（风冷+水冷）：</b>蒸汽冷凝后从正前方缓缓排出，不冲柜体、开门不烫脸（没这功能的机器往前喷热气，会损坏柜体）。</li>
+      </ul>
+    </div>
+
+    <div class="card info-card">
+      <h3><span class="dot"></span>📡 微 —— 为什么微蒸烤出现得晚</h3>
+      <ul>
+        <li>微波炉1945年就发明了，微蒸烤一体机却晚了五六年：<b>难在结构</b>——220V高压磁控管+搅拌天线挤占上烤管空间，烘烤会被阉割。</li>
+        <li>磁控管技术迭代后，如今微、蒸、烤结构上已可互不干扰。</li>
+        <li><b>功率：</b>家用800W足够；要更快看1000W+（凯度系1100W、美的R6S二代1150W）。</li>
+      </ul>
+      <div class="warn">⚠️ 微波加热时用<b>专用网架</b>，千万不要用蒸盘或烤盘。</div>
+    </div>
+
+    <div class="card info-card">
+      <h3><span class="dot"></span>⚖️ 蒸烤箱 vs 微蒸烤二选一</h3>
+      <ul>
+        <li><b>性能：</b>微蒸烤的蒸烤功能与蒸烤箱基本一样，<b>不存在减配</b>。</li>
+        <li><b>价格：</b>同性能的微蒸烤比"蒸烤箱+微波炉"组合<b>贵几百到一千</b>。</li>
+        <li><b>空间：</b>微蒸烤省出一个微波炉的位置。</li>
+        <li><b>结论：</b>纯看权衡——台面/柜位紧张、爱热菜的选微蒸烤；已有顺手的微波炉、预算敏感的选蒸烤箱。</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ 蒸汽正误 ============ -->
+<section id="steam">
+  <div class="sec-head"><span class="sec-num">3</span><h2>蒸汽系统正误对比（最影响日常体验）</h2>
+    <div class="sec-desc">专栏原文对四种结构的特点拆解，绿=优先选，红=尽量避开</div>
+  </div>
+  <div class="card">
+    <div class="vs-grid" style="margin-bottom:12px;">
+      <div class="vs-col win">
+        <h4><span class="vs-tag">✔ 优先</span>直喷式 · 流道式蒸发器</h4>
+        <ul>
+          <li>水流经发热盘<b>瞬间气化</b>，出汽快、断电即停</li>
+          <li>蒸汽量比铝制<b>大一倍</b>，蒸出来干爽鲜嫩不湿哒哒</li>
+          <li>舱内积水少，<b>极难产生水垢</b>（偏心流道无积水死角）</li>
+          <li>代表：美的（拆机验证）、德普TD55Ultra AI等</li>
+        </ul>
+      </div>
+      <div class="vs-col lose">
+        <h4><span class="vs-tag">✘ 次选</span>直喷式 · 铝制蒸汽发生器</h4>
+        <ul>
+          <li>原理类似烧水壶，加热管给水加热</li>
+          <li>时间长了<b>水垢积累</b>，蒸制均匀性变差、效率变低</li>
+          <li>便宜机型常见，预算内尽量升级流道式</li>
+        </ul>
+      </div>
+    </div>
+    <div class="vs-grid">
+      <div class="vs-col lose">
+        <h4><span class="vs-tag">✘ 避开</span>蒸腾式（煮水式）</h4>
+        <ul>
+          <li>底部蒸发皿煮水，蒸汽"咕嘟"上来充满内腔</li>
+          <li>顶部冷凝水可能<b>倒流回蒸发盘二次蒸发</b>，卫生隐患</li>
+          <li>底部水渍多，<b>打理麻烦</b></li>
+          <li>结构简单成本低，仍见于部分品牌（方太在售两款）</li>
+        </ul>
+      </div>
+      <div class="vs-col win">
+        <h4><span class="vs-tag">✔ 不用纠结</span>上直喷 / 下直喷</h4>
+        <ul>
+          <li>早期存在上直喷产品，<b>现在基本都是下直喷</b></li>
+          <li>这个维度不用花精力，看直喷/流道式即可</li>
+        </ul>
+      </div>
+    </div>
+    <div class="tip">💡 加分项：一键抽水功能（德普TD55Ultra AI带）——长期不用时把蒸发器和水管余水排掉，杜绝陈水问题。</div>
+  </div>
+</section>
+
+<!-- ============ 全价位机型 ============ -->
+<section id="models">
+  <div class="sec-head"><span class="sec-num">4</span><h2>机型清单（26年双11口径 · 共50多款筛后推荐）</h2>
+    <div class="sec-desc">UP主整理热销50多款机型后的分档结论；"标价"取自专栏商品卡片，双11到手价普遍更低且波动大，以实时到手价为准</div>
+  </div>
+
+  <div class="price-block p1">
+    <div class="price-head">📡 嵌入式微蒸烤一体机（3000-8000+）<span class="ph-sub">四大头部：美的 · 凯度 · 方太 · 老板（共27款）</span></div>
+    <div class="price-body">
+      <table>
+        <tr><th style="width:200px;">机型</th><th style="width:92px;">推荐度</th><th>UP主点评</th></tr>
+        <tr>
+          <td class="model">美的 GC5二代<small>标价¥6402起 · 5k以下重点款</small></td>
+          <td><span class="pill rec">5k内首选</span></td>
+          <td>较GC5：屏10→19.5英寸、把手内嵌隐藏式防撞；<b class="pros">杯水鲜蒸</b>（出汽快、持续久、蒸后积水少，煲汤党友好）；升级<b class="pros">独立控温</b>，披萨泡芙戚风都能做。</td>
+        </tr>
+        <tr>
+          <td class="model">美的 GC7<small>标价¥6273起 · 78L大容量</small></td>
+          <td><span class="pill rec">大家庭</span></td>
+          <td>容量78L可<b class="pros">三层同烤同蒸</b>，适合人口多的家庭；杯水鲜蒸+111道内置菜谱，新手友好。5000以内重点看GC5二代和GC7。</td>
+        </tr>
+        <tr>
+          <td class="model">美的 知味感R6S二代<small>标价¥6535起 · 标准版口径</small></td>
+          <td><span class="pill rec">重点关注</span></td>
+          <td>5k+美的先筛"瞬热涡轮大热风"（石墨烯烤管0.2s升温+2633r/min）。R6S二代：<b class="pros">蒸烤微波各项都突出</b>——纯蒸2600W、微波1150W。预算内重点款。</td>
+        </tr>
+        <tr>
+          <td class="model">美的 知味感R6S二代MAX<small>标价¥8495起 · 60L</small></td>
+          <td><span class="pill top">颜值发烧款</span></td>
+          <td>MAX升级：<b class="pros">SE算法温差±1℃</b>、20英寸大彩屏、电动开门、语音交互。看重温控精度和整体高级感再上。</td>
+        </tr>
+        <tr>
+          <td class="model">凯度 TR Pro<small>标价¥6757起（SR52FDF24）· 58L</small></td>
+          <td><span class="pill rec">凯度系推荐款</span></td>
+          <td>凯度微蒸烤容量以52L为主（主流已往60L+发展）；全系烧烤2800W/微波1100W/陶瓷内胆。区别在风扇数量与转速（2000 vs 2500r/min，<b>转速越高空气炸越好</b>）。<b>预算紧张看GRPro；2500转档里UP主结论：TR Pro就够了</b>。</td>
+        </tr>
+        <tr>
+          <td class="model">老板 小贝果D5<small>2026年9月新品</small></td>
+          <td><span class="pill mid">新品可关注</span></td>
+          <td>转速2000→<b class="pros">2500r/min</b>；下烤管U型→M型面积更大；<b class="pros">上下独立控温+双感温探头+AI动态调节</b>（给出食物温度曲线）；电动开门+19英寸巨幕屏。老板方太市占率低于美的凯度，新品不多，这款可以关注。</td>
+        </tr>
+      </table>
+      <p style="font-size:12.3px;color:#64748B;margin:6px 0 0;">* 方太微蒸烤：<b>风扇转速偏低</b>，且在售<b>两款为蒸腾式</b>（见避坑名单）。美的5k+其余款：GC5 Pro纯蒸2600W、是这批唯一白色款，白色厨柜党关注。</p>
+    </div>
+  </div>
+
+  <div class="price-block p2">
+    <div class="price-head">🔥 嵌入式蒸烤箱（2000-8000+）<span class="ph-sub">不带微波 · UP主更建议大家重点看4000-6000档</span></div>
+    <div class="price-body">
+      <table>
+        <tr><th style="width:200px;">机型</th><th style="width:92px;">推荐度</th><th>UP主点评</th></tr>
+        <tr>
+          <td class="model">美的 5053<small>2000多价位</small></td>
+          <td><span class="pill mid">入门极限选</span></td>
+          <td>2000多能买到完整性能（上下管+背热风+直喷），但<b class="cons">交互差、黑白屏</b>，新手上手难。与老板同价位款二选一选它——老板那款是不锈钢内胆，<b class="cons">用久会发黄</b>。</td>
+        </tr>
+        <tr>
+          <td class="model">老板 盐系G1<small>3000多</small></td>
+          <td><span class="pill mid">档内独苗</span></td>
+          <td>3000档彩屏触屏基本都有，体验好很多。G1是这一档<b class="pros">唯一支持独立控温</b>的，披萨蛋挞泡芙适用；注意老板详情页<b class="cons">找不到单独的蒸/烤功率</b>。另两款热门：美的SX5（风扇2500r/min）、SX7（大容量）。</td>
+        </tr>
+        <tr>
+          <td class="model">德普 TD55Ultra AI<small>标价¥6875起 · 55L · 无缝陶瓷内胆</small></td>
+          <td><span class="pill rec">智能化首选</span></td>
+          <td>4k-6k重点价位。德普4款全系：<b class="pros">无缝陶瓷内胆</b>（背部无螺丝孔不挂油污26年大多数搪瓷/陶瓷内胆做不到）+玻璃纤维棉全包裹。旗舰Ultra AI：圭钻玻璃面板、13.8英寸屏、99道菜谱、蒸烤均3050W、独立控温、双孔直喷、<b class="pros">一键抽水</b>、<b class="pros">AI语音大模型</b>（厨房忙碌时语音预热/推荐菜谱）。</td>
+        </tr>
+        <tr>
+          <td class="model">德普 TD55X<small>标价¥5748起（TD55X-AI同价系）</small></td>
+          <td><span class="pill rec">性价比之选</span></td>
+          <td>同系入门款，比TD55M彩屏更大；极简操作、追求性价比选它。担心AI不成熟/误触的，选非AI版本，云端菜谱500+够用。</td>
+        </tr>
+        <tr>
+          <td class="model">凯度 TD Max<small>标价¥6051起 · 80L独一份</small></td>
+          <td><span class="pill rec">大容量</span></td>
+          <td>热销9款里<b class="pros">唯一80L</b>大容量；18.2英寸彩屏无把手。要大容量的直接看它。同档老板C9077A-C5带<b class="pros">旋转烤</b>（配旋转网可烘咖啡豆，自家烘豆党重点关注）。</td>
+        </tr>
+        <tr>
+          <td class="model">美的 灵眸 E5<small>标价¥8599起 · 50L</small></td>
+          <td><span class="pill rec">新手友好</span></td>
+          <td>6k+价位（UP主：这个价位对蒸烤箱已偏贵）。美的两款都搪瓷内胆+130道菜谱+杯水鲜蒸；E5是<b class="pros">双孔直喷</b>（E7单孔稍逊）+<b class="pros">AI摄像头实时监控熟度自动调火候</b>，看熟的是E7（78L+瞬热涡轮+AI语音）。新手优先E5。</td>
+        </tr>
+      </table>
+      <p style="font-size:12.3px;color:#64748B;margin:6px 0 0;">* 6k+的西门子Z7是统一控温，UP主直言"在这个价位确实不太应该"，不建议。</p>
+    </div>
+  </div>
+
+  <div class="price-block p4">
+    <div class="price-head">🍞 台式蒸烤箱 / 微蒸烤（3000-8000）<span class="ph-sub">热销9款 · 第一轮必筛"上下烤管+背部大热风"</span></div>
+    <div class="price-body">
+      <table>
+        <tr><th style="width:200px;">机型</th><th style="width:92px;">推荐度</th><th>UP主点评</th></tr>
+        <tr>
+          <td class="model">德普 小吐司T5 PRO<small>标价¥3399起 · 3k内</small></td>
+          <td><span class="pill rec">烘焙党入门</span></td>
+          <td>3k以内能看的：<b class="pros">独立控温</b>对烘焙爱好者友好，缺点是<b class="cons">容量偏小</b>（台式普遍20-30L）。</td>
+        </tr>
+        <tr>
+          <td class="model">美的 寻味Pro3.0<small>标价¥5410起 · 32L · 台嵌两用</small></td>
+          <td><span class="pill rec">3k+配置拉满</span></td>
+          <td>32L更大；流道式蒸汽发生器+<b class="pros">纯蒸1800W</b>（UP主特别提醒：很多品牌标的是烤管同时工作的峰值功率，要对比纯蒸模式功率）、150℃高温蒸、宽幅调温；烤：独立控温+0.2s瞬热涡轮+2000W。</td>
+        </tr>
+        <tr>
+          <td class="model">美的 寻味Pro3.0 AI版<small>标价¥8168起</small></td>
+          <td><span class="pill top">智能党</span></td>
+          <td>接AI大模型：下菜谱指令即生成详细教程，温度时间不用自己查，一键启动；可接入全屋智能语音智控。</td>
+        </tr>
+        <tr>
+          <td class="model">凯度 T8（紫焰）<small>标价¥6045起 · 32L双热风</small></td>
+          <td><span class="pill mid">性能再上一档</span></td>
+          <td>烤功率和蒸功率都比寻味Pro3.0更大，同样32L，价格贵几百元。要更快更猛的看它。</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 避坑名单 ============ -->
+<section id="black">
+  <div class="sec-head"><span class="sec-num">5</span><h2>UP主点名的"不建议 / 避坑项"</h2></div>
+  <div class="blacklist">
+    <h3>🚫 名单与陷阱</h3>
+    <div class="bl-grid">
+      <div class="bl-item"><b>台式减配重灾区</b><br>26年嵌入式蒸烤箱/微蒸烤基本不缺上下烤管+背部热风了，但<b>台式仍有不少减配</b>——第一轮就筛掉。</div>
+      <div class="bl-item"><b>方太在售两款蒸腾式</b><br>微蒸烤部分：方太风扇转速偏低，其中两款是蒸腾式（二次蒸发卫生隐患+底部水渍难打理）。</div>
+      <div class="bl-item"><b>西门子3000档两款</b><br>嵌入式蒸烤箱3000多档：不锈钢内胆+黑白屏配置，UP主直接剔除。</div>
+      <div class="bl-item"><b>西门子Z7（6k+档）</b><br>卖到6千以上还是<b>统一控温</b>，"这个价位确实不太应该"，不建议。</div>
+      <div class="bl-item"><b>2000档黑白屏交互</b><br>便宜蒸烤箱功能完整但人机交互极差（黑白屏），新手上手困难；同价优先选不锈钢内胆的替代款。</div>
+      <div class="bl-item"><b>老板2000档那款（不锈钢内胆）</b><br>内胆用久发黄，与美的5053二选一选美的。</div>
+      <div class="bl-item"><b>峰值功率文字游戏</b><br>很多品牌"蒸的功率"其实是烤管同时工作的峰值功率，<b>对比纯蒸模式功率</b>才是真实力。</div>
+      <div class="bl-item"><b>微波用蒸盘/烤盘</b><br>微波加热必须用专用网架，用蒸盘烤盘是错误用法（安全问题）。</div>
+      <div class="bl-item"><b>凯度低转速款</b><br>2000r/min款剥离水分能力弱于2500r/min款，同预算优先2500转档（预算紧张才看GRPro）。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 场景抄作业 ============ -->
+<section id="scene">
+  <div class="sec-head"><span class="sec-num">6</span><h2>按场景抄作业（一句话拿走）</h2>
+    <div class="sec-desc">整理自专栏各档结论，方便对号入座</div>
+  </div>
+  <div class="scene-grid">
+    <div class="scene green">
+      <h4>🥧 烘焙党（披萨/蛋挞/泡芙/戚风）</h4>
+      <p>独立控温是灵魂，上下管不同温才有层次。</p>
+      <span class="pick">嵌入：老板盐系G1 / 德普TD55系 / GC5二代；台式：德普T5 PRO</span>
+    </div>
+    <div class="scene green">
+      <h4>🍲 煲汤蒸菜党</h4>
+      <p>杯水鲜蒸：出汽快、持续久、蒸后积水少。</p>
+      <span class="pick">美的GC5二代 / GC7 / E5</span>
+    </div>
+    <div class="scene">
+      <h4>🍱 热菜刚需 + 柜位紧张</h4>
+      <p>微蒸烤一步到位，省一个微波炉位（贵几百到一千）。</p>
+      <span class="pick">5k内GC5二代/GC7；5k+ R6S二代 / 凯度TR Pro</span>
+    </div>
+    <div class="scene">
+      <h4>👨‍👩‍👧‍👧 大家庭 / 常聚餐</h4>
+      <p>78-80L三层同烤同蒸，一次出一桌。</p>
+      <span class="pick">美的GC7（78L微蒸烤）/ 凯度TD Max（80L蒸烤箱）</span>
+    </div>
+    <div class="scene gold">
+      <h4>🤖 智能懒人 / 新手小白</h4>
+      <p>AI大模型语音操控、AI摄像头盯熟度、大屏跟菜谱。</p>
+      <span class="pick">德普TD55Ultra AI / 美的E5（摄像头）/ R6S二代MAX</span>
+    </div>
+    <div class="scene">
+      <h4>☕ 自家烘咖啡豆</h4>
+      <p>旋转烤+旋转网配件可烘豆，按论文参数操作。</p>
+      <span class="pick">老板 C9077A-C5</span>
+    </div>
+    <div class="scene">
+      <h4>🏠 租房 / 台面党 / 柜位没留</h4>
+      <p>台式灵活但这轮先筛"上下管+背热风"，别被迷你机骗。</p>
+      <span class="pick">3k内德普小吐司T5 PRO；3k+寻味Pro3.0 / 凯度T8</span>
+    </div>
+    <div class="scene green">
+      <h4>🎨 白色厨柜 / 颜值党</h4>
+      <p>微蒸烤多为黑色系，要白色得挑。</p>
+      <span class="pick">美的GC5 Pro（5k+档唯一白色款）</span>
+    </div>
+    <div class="scene">
+      <h4>🥩 进阶玩法党</h4>
+      <p>加湿烤（鲜嫩模式）边烤边加湿；蒸烤同烹一锅出两菜。</p>
+      <span class="pick">主流直喷式微蒸烤基本都支持，下单前确认功能表</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 核对清单 ============ -->
+<section id="checklist">
+  <div class="sec-head"><span class="sec-num">7</span><h2>下单前核对清单（点着勾，自动记忆）</h2>
+    <div class="sec-desc">打开商品详情页逐条对照；勾选状态保存在本机浏览器，关了页面也不丢</div>
+  </div>
+  <div class="card">
+    <div class="check-progress">
+      进度 <span class="bar"><i id="ckBar"></i></span> <span id="ckCount">0 / 12</span>
+    </div>
+    <div class="check-grid" id="checkGrid">
+      <label class="check-item"><input type="checkbox" data-k="k1"><span><span class="ck-title">上下烤管 + 背部热风（台式必查）</span><span class="ck-note">缺一就是减配机：单面焦 / 表皮不脆</span></span></label>
+      <label class="check-item"><input type="checkbox" data-k="k2"><span><span class="ck-title">上下独立控温</span><span class="ck-note">烘焙党必选；统一控温只能算够用</span></span></label>
+      <label class="check-item"><input type="checkbox" data-k="k3"><span><span class="ck-title">直喷式蒸汽（避开蒸腾式）</span><span class="ck-note">蒸腾式有二次蒸发卫生隐患+底部水渍</span></span></label>
+      <label class="check-item"><input type="checkbox" data-k="k4"><span><span class="ck-title">流道式蒸发器（直喷式里更优）</span><span class="ck-note">瞬间气化、出汽量大、几乎不结垢</span></span></label>
+      <label class="check-item"><input type="checkbox" data-k="k5"><span><span class="ck-title">纯蒸模式功率（别看峰值）</span><span class="ck-note">很多品牌标的是烤管同开的峰值功率</span></span></label>
+      <label class="check-item"><input type="checkbox" data-k="k6"><span><span class="ck-title">双重冷凝排气（风冷+水冷）</span><span class="ck-note">蒸汽前方缓排，不冲柜体不烫脸</span></span></label>
+      <label class="check-item"><input type="checkbox" data-k="k7"><span><span class="ck-title">加湿烤 / 蒸烤同烹</span><span class="ck-note">边烤边加湿不干柴、上下层一锅出</span></span></label>
+      <label class="check-item"><input type="checkbox" data-k="k8"><span><span class="ck-title">陶瓷/搪瓷无缝内胆（查背部螺丝孔）</span><span class="ck-note">德普无缝一体成型最优；不锈钢内胆会发黄</span></span></label>
+      <label class="check-item"><input type="checkbox" data-k="k9"><span><span class="ck-title">一键抽水（可选）</span><span class="ck-note">排空蒸发器与水管余水，杜绝陈水</span></span></label>
+      <label class="check-item"><input type="checkbox" data-k="k10"><span><span class="ck-title">风扇转速 ≥2500r/min（可选）</span><span class="ck-note">越高剥离水分越强，空气炸/脆皮越好</span></span></label>
+      <label class="check-item"><input type="checkbox" data-k="k11"><span><span class="ck-title">微波≥800W（微蒸烤机型）</span><span class="ck-note">800W够用；1000W+更快</span></span></label>
+      <label class="check-item"><input type="checkbox" data-k="k12"><span><span class="ck-title">安装条件核对：16A插座 + 散热空间 + 高度</span><span class="ck-note">详见下方安装落地，错了返工最贵</span></span></label>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 安装落地 ============ -->
+<section id="install">
+  <div class="sec-head"><span class="sec-num">8</span><h2>安装落地三件事（视频原话 · 最容易忽略）</h2></div>
+  <div class="grid-2">
+    <div class="card info-card">
+      <h3><span class="dot"></span>⚠️ 视频强调的安装三坑</h3>
+      <ol>
+        <li><b>16A专用插座：</b>所有蒸烤箱/微蒸烤一体机都是16A插头；插座<b>尽量留在相邻柜子里</b>，插头不占机器进深。</li>
+        <li><b>散热空间：</b>背部<b>不要做背板</b>，机器地板不要顶到墙，<b>至少留50mm</b>。</li>
+        <li><b>安装高度：</b>按自家身高定，保证拿放食材方便、弯腰幅度小——人在厨房站着操作最顺手的高度。</li>
+      </ol>
+    </div>
+    <div class="card reno">
+      <h3>🔨 结合装修流程的提醒<span class="tag-my">整理者补充 · 非视频内容</span></h3>
+      <ol>
+        <li><b>水电阶段就在图上标：</b>蒸烤箱和嵌入式洗碗机一样，<b>电位必须16A独立回路</b>；插座留在蒸烤箱柜位<b>旁的柜内</b>而不是正后方（机身进深会被插头顶住）。</li>
+        <li><b>告诉橱柜厂"这个柜不装背板"：</b>下单定制时单独说明蒸烤箱柜位背板取消、留足散热距离——这个最容易在深化设计时被"统一做法"覆盖回去。</li>
+        <li><b>高度先想好：</b>嵌入式别默认做太低，按家里主力做饭人的身高定（大致在地柜中上部操作顺手）；如果要上下双嵌（蒸烤箱+微蒸烤叠装），更要提前规划电气和承重。</li>
+        <li><b>机型先定再开孔：</b>嵌入尺寸各品牌有差异（如德普55L是460mm高的通用尺寸，其他品牌有浮动），拿到所选机型官方安装图再定柜位开孔尺寸，别先封柜再找机器。</li>
+        <li><b>台式也要留电位：</b>哪怕先买台式（如租房阶段或厨电分批买），厨房台面上方也要预留足够功率的插座，避免后期拖插线板。</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <b>📖 信息来源：</b>B站视频《一机多用，样样将就？双11蒸烤箱选购，台式·嵌入·微蒸烤横评》（UP主：Wilson学长，2026年10月发布，时长20分43秒）及其同名专栏文章。本文档为要点整理，机型推荐结论忠实于UP主观点；"结合装修流程的提醒"为整理者补充，已单独标注，非视频内容。<br>
+  <b>⚠️ 价格口径说明：</b>文中标价取自专栏文章发布期的商品卡片展示价，双11到手价普遍更低且随时间波动，下单前以实时到手价为准。各机型参数以商品详情页与官方安装说明书为准，本页不替代厂商资料。<br>
+  <b>🛠️ 使用说明：</b>本页支持在线浏览，也可右键“网页另存为”保存完整单文件离线版（双击即可打开）；核对清单勾选自动保存在浏览器的 localStorage 中，不上传任何数据；右下按钮支持打印/另存PDF（打印为黑白深色排版）。
+  <div class="fyi" style="font-size:11.5px;">整理时间：2026-11-20 · 核对原始内容后整理</div>
+  <div class="aigc">本页内容由 AI（星辰超级智能体）整理生成</div>
+</footer>
+
+</div>
+
+<div class="float-btns">
+  <button class="fbtn print" onclick="window.print()" title="打印 / 另存PDF">🖨</button>
+  <button class="fbtn" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="回到顶部">↑</button>
+</div>
+
+<script>
+(function(){
+  // ===== 核对清单：localStorage 记忆 =====
+  var PREFIX = 'steamoven_checklist_v1';
+  var boxes = document.querySelectorAll('.check-item input[type=checkbox]');
+  var bar = document.getElementById('ckBar');
+  var cnt = document.getElementById('ckCount');
+  function refresh(){
+    var done = 0, total = boxes.length;
+    boxes.forEach(function(b){
+      b.closest('.check-item').classList.toggle('done', b.checked);
+      if(b.checked) done++;
+    });
+    bar.style.width = (total ? (done/total*100) : 0) + '%';
+    cnt.textContent = done + ' / ' + total;
+    try { localStorage.setItem(PREFIX, JSON.stringify(Array.prototype.map.call(boxes, function(b){return b.checked;}))); } catch(e){}
+  }
+  try {
+    var saved = JSON.parse(localStorage.getItem(PREFIX) || '[]');
+    boxes.forEach(function(b,i){ if(saved[i]) b.checked = true; });
+  } catch(e){}
+  boxes.forEach(function(b){ b.addEventListener('change', refresh); });
+  refresh();
+})();
+</script>
+</body>
+</html>
